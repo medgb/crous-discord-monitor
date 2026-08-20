@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  crous-monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crous-discord-monitor
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persistent SQLite database storage
+      - ./data:/app/data
+      # Debug screenshots directory
+      - ./debug/screenshots:/app/debug/screenshots
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

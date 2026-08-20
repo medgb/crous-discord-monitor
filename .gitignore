@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Environment & Secrets
+.env
+*.env.local
+*.key
+*.pem
+id_rsa
+id_ed25519
+
+# Persistent SQLite Data & Browser Sessions
+data/
+*.db
+*.sqlite3
+session.json
+storage_state.json
+
+# Debug & Screenshots
+debug/screenshots/*
+!debug/screenshots/.gitkeep
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
